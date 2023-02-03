@@ -431,7 +431,7 @@ if filename!=None:
                        data=df_xlsx,
                        file_name='MENTIONED.xlsx')
         
-        loads_friends_df.reset_index()
+        loadsa_friends_df.reset_index()
         sl.table(loadsa_friends_df)
         df_xlsx = to_excel(loadsa_friends_df)
         st.download_button(label='📥 Download FRIENDS Result',
