@@ -414,8 +414,6 @@ if filename!=None:
                        data=df_xlsx,
                        file_name='df_test.xlsx')
 
-
-    print(df)
     sl.write("Twitter persona details XLS file saved, open your new excel sheet to see the results.")
 
     if not basic_table:
@@ -427,8 +425,13 @@ if filename!=None:
         loadsa_friends_df = chart_mentions(massive_friends_list)
 
         # now write the additional twitter accounts
-        new_personas_df.to_excel(path + savetofilename + "_MENTIONED.xlsx")
-        sl.write("NEW twitter personas XLS file saved")
-
-        loadsa_friends_df.to_excel(path + savetofilename + "_FOLLOWING.xlsx")
-        sl.write("Friends list XLS file saved")
+      
+        df_xlsx = to_excel(new_personas_df)
+        st.download_button(label='📥 Download Current Result',
+                       data=df_xlsx,
+                       file_name='MENTIONED.xlsx')
+        
+        df_xlsx = to_excel(loadsa_friends_df)
+        st.download_button(label='📥 Download Current Result',
+                       data=df_xlsx,
+                       file_name='FRIENDS.xlsx')
