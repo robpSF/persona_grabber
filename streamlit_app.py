@@ -298,7 +298,7 @@ data = []
 
 #path = sl.text_input(label="Path", value="C:/Users/rober_vsah/downloads/")
 #filename = sl.text_input(label="CSV filename", value="input") + ".csv"
-filename = sl.file_uploader("drop XLSX with twitter handles here (needs one column headed 'username'")
+filename = sl.file_uploader("drop XLSX with twitter handles here (needs one column headed 'username')")
 
 if filename!=None:
     # Read the excel file into a pandas DataFrame
