@@ -300,8 +300,6 @@ data = []
 #filename = sl.text_input(label="CSV filename", value="input") + ".csv"
 filename = sl.file_uploader("drop CSV with twitter handles here")
 
-savetofilename = sl.text_input(label="SAVE to EXCEL filename",
-                               value="new")
 if filename!=None:
     # Read the excel file into a pandas DataFrame
     df = pd.read_excel(filename)
