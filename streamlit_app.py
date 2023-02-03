@@ -424,11 +424,13 @@ if filename!=None:
 
         # now write the additional twitter accounts
       
+        sl.table(new_personas_df)
         df_xlsx = to_excel(new_personas_df)
         st.download_button(label='📥 Download MENTIONED Result',
                        data=df_xlsx,
                        file_name='MENTIONED.xlsx')
         
+        sl.table(loadsa_friends_df)
         df_xlsx = to_excel(loadsa_friends_df)
         st.download_button(label='📥 Download FRIENDS Result',
                        data=df_xlsx,
