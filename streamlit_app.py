@@ -408,9 +408,9 @@ if filename!=None:
     # df.to_excel(path+savetofilename+".xlsx")
     #df.to_excel(path+"new.xlsx", index=False)
     df_xlsx = to_excel(df)
-    st.download_button(label='📥 Download Current Result',
+    st.download_button(label='📥 Download PERSONAS Result',
                        data=df_xlsx,
-                       file_name='df_test.xlsx')
+                       file_name='personas.xlsx')
 
     sl.write("Twitter persona details XLS file saved, open your new excel sheet to see the results.")
 
@@ -425,11 +425,11 @@ if filename!=None:
         # now write the additional twitter accounts
       
         df_xlsx = to_excel(new_personas_df)
-        st.download_button(label='📥 Download Current Result',
+        st.download_button(label='📥 Download MENTIONED Result',
                        data=df_xlsx,
                        file_name='MENTIONED.xlsx')
         
         df_xlsx = to_excel(loadsa_friends_df)
-        st.download_button(label='📥 Download Current Result',
+        st.download_button(label='📥 Download FRIENDS Result',
                        data=df_xlsx,
                        file_name='FRIENDS.xlsx')
