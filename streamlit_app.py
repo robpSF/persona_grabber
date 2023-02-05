@@ -43,7 +43,7 @@ import datetime
 from datetime import timezone
 from geopy.geocoders import Nominatim
 
-geolocator = Nominatim(user_agent="robsapp")
+geolocator = Nominatim(sl.secrets["user_agent"])
 
 import sys
 
