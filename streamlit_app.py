@@ -64,7 +64,7 @@ access_token_secret = sl.secrets["access_token_secret"]
 password = sl.secrets["password"]
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth, wait_on_rate_limit=True)
+api = tweepy.Client(auth, wait_on_rate_limit=True)
 # ----- ok that's Tweepy all setup --------------------------
 
 if password != sl.text_input("Enter password"): exit(600)
